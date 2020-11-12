@@ -21,14 +21,19 @@ div {
  * ボタンの共通設定
  */
 .common-button {
+    background-color: #00B7FF;
+    border: none;
+}
 
+.btn {
+    background-color: #00B7FF;
 }
 
 /*
  * トップ画面（index.hbs）に関する設定
  */
 .index-user_name {
-
+    
 }
 
 .index-user_name_text {
