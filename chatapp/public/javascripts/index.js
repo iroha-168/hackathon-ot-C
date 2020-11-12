@@ -9,6 +9,7 @@ function enter() {
     if(userName == "") {
         //ユーザー名を入力してくださいと出力
         alert("ユーザー名を入力してください");
+        return false;
     }
 
     $('form').submit();
