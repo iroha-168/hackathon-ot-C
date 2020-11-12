@@ -8,6 +8,9 @@ function publish() {
     const message = $('#message').val();
     // 投稿内容を送信
     socket.emit('sendMessageEvent',userName +"さん"+" : "+ message)
+    //textBoxを空にする
+    message = $('#message').val("");
+
     return false;
 }
 
