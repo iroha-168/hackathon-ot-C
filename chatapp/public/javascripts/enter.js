@@ -8,6 +8,6 @@ const userName = $('#userName').val();
 socket.emit('enterMyselfEvent',userName +"さんが入室しました。")
 
 // サーバから受信した入室メッセージを画面上に表示する
-socket.on('enterMyselfEvent', function (data) {
-    $('#thread').prepend('<p>' +userName+ '</p>');
+socket.on('receiveEnterEvent', function (data) {
+    $('#thread').prepend('<p>' + data + '</p>');
 });
