@@ -5,6 +5,6 @@ module.exports = function (socket) {
     socket.on('enterMyselfEvent', function (data) {
         // 画面上にメッセージを表示
 
-        $('#thread').prepend('<p>' + data + '</p>');
+        //$('#thread').prepend('<p>' + data + '</p>');
     });
 };
