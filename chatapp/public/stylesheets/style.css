@@ -25,17 +25,17 @@ body {
     border-radius: 10px;
 }
 
-.sendexit_box {
+.sendenter_box {
     margin: 1em 0;
-    padding: 1em;
-    background-color: #ffe082;
+    padding: 5px;
+    background-color: rgba(44,62,80,0.25);
     border-radius: 10px;
 }
 
-.sendenter_box {
+.sendexit_box {
     margin: 1em 0;
-    padding: 1em;
-    background-color: #ffe082;
+    padding: 5px;
+    background-color: rgba(44,62,80,0.25);
     border-radius: 10px;
 }
 
