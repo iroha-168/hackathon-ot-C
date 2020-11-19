@@ -30,8 +30,11 @@ function publish() {
         alert("空白、改行以外の文字を入力してください。");
         return false;
     }
-    
+
+    //改行文字を<br>に置き換え
+    /*let newMessage = message.replace(/\n/g,"<br>");*/
     // 投稿内容を送信
+    /*socket.emit('sendMessageEvent',userName +"さん"+" : "+ newMessage)*/
     socket.emit('sendMessageEvent',userName +"さん"+" : "+ message)
     //textBoxを空にする
     $('#message').val("");
