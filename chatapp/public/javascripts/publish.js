@@ -6,7 +6,6 @@ function publish() {
     const userName = $('#userName').val();
     // 入力されたメッセージを取得
     const message = $('#message').val();
-<<<<<<< Updated upstream
     //空メッセージのチェック・エラー表示
     if(message == ""){
         alert("メッセージを入力してください。");
