@@ -12,6 +12,14 @@ function enter() {
         return false;
     }
 
+    const form = document.getElementById('form1');
+
+    form.addEventListener('keydown', function(event) {
+        if(event.keyCode === 13) {
+            alert("ユーザー名を入力してください");
+            return false;
+        }
+    })
     $('form').submit();
 }
 
