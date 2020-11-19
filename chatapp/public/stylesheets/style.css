@@ -3,6 +3,19 @@
  */
 body {
     font: 14px "Lucida Grande", Meiryo, Helvetica, Arial, sans-serif;
+    background-image: url("jangle_image_for_chat_app.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.container {
+    max-width: 650px;
+    margin: 1em 0;
+    padding: 1em;
+    color: 	#006400;
+    background-color: #FFFFFF;
+    border: solid 3px 	#FFD700;
 }
 
 a {
@@ -16,6 +29,7 @@ div {
 .row {
     margin: 20px;
 }
+
 
 /*
  * ボタンの共通設定
