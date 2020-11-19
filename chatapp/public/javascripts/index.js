@@ -20,7 +20,7 @@ function enter() {
             return false;
         }
     })
-    
+    taskInsert();
     $('form').submit();
 }
 
