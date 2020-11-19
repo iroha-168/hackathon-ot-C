@@ -61,7 +61,7 @@ function publish() {
     // 現在時刻を取得
     const sendTime = getNow();
     // 投稿内容を送信
-    socket.emit('sendMessageEvent',userName +"さん"+" : "+ message +" "+ sendTime)
+    socket.emit('sendMessageEvent',userName +"さん"+" : "+ message +`<br><div align="right">` +  sendTime + "</div>")
     //textBoxを空にする
     $('#message').val("");
 
