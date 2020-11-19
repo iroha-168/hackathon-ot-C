@@ -7,7 +7,7 @@ function exit() {
     // 現在時刻を取得
     const sendTime = getNow();
     // 退室メッセージイベントを送信する
-    socket.emit('exitMyselfEvent',userName +"さんが退出しました。" + sendTime)
+    socket.emit('exitMyselfEvent',userName +`さんが退室しました。<br><div align="right">` +  sendTime + "</div>")
     // 退室
     location.href = '/';
 }

@@ -6,7 +6,7 @@ const userName = $('#userName').val();
 const sendTime = getNow();
 //io.sockets.emit('enterMyselEvent',)
 // 入室メッセージをサーバに送信する
-socket.emit('enterMyselfEvent',userName +"さんが入室しました。" + sendTime)
+socket.emit('enterMyselfEvent',userName +`さんが入室しました。<br><div align="right">` +  sendTime + "</div>")
 
 // サーバから受信した入室メッセージを画面上に表示する
 socket.on('receiveEnterEvent', function (data) {
