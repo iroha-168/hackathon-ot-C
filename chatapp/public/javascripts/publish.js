@@ -11,6 +11,21 @@ function publish() {
         alert("メッセージを入力してください。");
         return false;
     }
+    if(message == "必需品"){
+        window.open('https://tabisuke.arukikata.co.jp/baggage/4680/', '_blank');
+        //alert("食料、水、服、靴");
+        return false;
+    }
+    if(message == "ジャングル"){
+        window.open('https://www.discoverychannel.jp/0000090849/', '_blank');
+        //alert("食料、水、服、靴");
+        return false;
+    }
+    if(message == "病気"){
+        window.open('https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000155663.html', '_blank');
+        //alert("食料、水、服、靴");
+        return false;
+    }
     //空白、改行のみのメッセージのチェック・エラー表示
     let count = 0;
     
