@@ -25,6 +25,20 @@ body {
     border-radius: 10px;
 }
 
+.sendexit_box {
+    margin: 1em 0;
+    padding: 1em;
+    background-color: #ffe082;
+    border-radius: 10px;
+}
+
+.sendenter_box {
+    margin: 1em 0;
+    padding: 1em;
+    background-color: #ffe082;
+    border-radius: 10px;
+}
+
 a {
     color: #00B7FF;
 }

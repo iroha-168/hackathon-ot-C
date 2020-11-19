@@ -10,7 +10,7 @@ socket.emit('enterMyselfEvent',userName +"さんが入室しました。" + send
 
 // サーバから受信した入室メッセージを画面上に表示する
 socket.on('receiveEnterEvent', function (data) {
-    $('#thread').prepend('<p>' + data + '</p>');
+    $('#thread').prepend('<p class="sendenter_box">' + data + '</p>');
 });
 
 function getNow() {
