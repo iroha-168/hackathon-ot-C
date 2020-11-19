@@ -20,6 +20,7 @@ function enter() {
             return false;
         }
     })
+    
     $('form').submit();
 }
 
