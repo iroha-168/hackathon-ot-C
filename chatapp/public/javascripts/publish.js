@@ -8,7 +8,7 @@ function publish() {
     const message = $('#message').val();
     //空メッセージのチェック・エラー表示
     if(message == ""){
-        alert("メッセージを入力してください");
+        alert("メッセージを入力してください。");
         return false;
     }
     //空白、改行のみのメッセージのチェック・エラー表示
@@ -26,8 +26,8 @@ function publish() {
             break;
         }
     }
-    if(count === 0){
-        alert("空白、改行以外の文字を入力してください");
+    if(count == 0){
+        alert("空白、改行以外の文字を入力してください。");
         return false;
     }
     
