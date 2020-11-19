@@ -46,6 +46,14 @@ function publish() {
         return false;
     }
 
+    const form = document.getElementById('form2');
+
+    form.addEventListener('keydown', function(event) {
+        if(event.keyCode === 13 || form.onclick) {
+            $('form').submit();
+        }
+    })
+    
     //改行文字を<br>に置き換え
     /*let newMessage = message.replace(/\n/g,"<br>");*/
     // 投稿内容を送信
@@ -53,7 +61,7 @@ function publish() {
     // 現在時刻を取得
     const sendTime = getNow();
     // 投稿内容を送信
-    socket.emit('sendMessageEvent',userName +"さん"+" : "+ message + `<br><div align="right">` +  sendTime + "</div>")
+    socket.emit('sendMessageEvent',userName +"さん"+" : "+ message +" "+ sendTime)
     //textBoxを空にする
     $('#message').val("");
 
