@@ -55,9 +55,9 @@ function publish() {
     })
     
     //改行文字を<br>に置き換え
-    /*let newMessage = message.replace(/\n/g,"<br>");*/
+    let newMessage = message.replace(/\n/g,"<br>");
     // 投稿内容を送信
-    /*socket.emit('sendMessageEvent',userName +"さん"+" : "+ newMessage)*/
+    socket.emit('sendMessageEvent',userName +"さん"+" : "+ newMessage);
     // 現在時刻を取得
     const sendTime = getNow();
     // 投稿内容を送信
@@ -86,3 +86,4 @@ function getNow() {
 	var s = year + "/" + mon + "/" + day + " " + hour + ":" + min + ":" + sec + ""; 
 	return s;
 }
+

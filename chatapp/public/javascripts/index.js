@@ -44,4 +44,4 @@ function taskInsert(){
     });
   
     db.close();
-  }
+}
