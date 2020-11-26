@@ -59,7 +59,7 @@ function publish() {
     // 現在時刻を取得
     let sendTime = getNow();
     // 投稿内容を送信
-    socket.emit('sendMessageEvent',userName +"さん"+" : "+ newMessage +`<br><div align="right">` +  sendTime + "</div>")
+    socket.emit('sendMessageEvent',userName +"さん"+" : "+ '<div class="message_box">'+newMessage +'</div>'+`<br><div align="right" class="time">` +  sendTime + "</div>")
     //textBoxを空にする
     $('#message').val("");
 
@@ -68,7 +68,7 @@ function publish() {
 
 // サーバから受信した投稿メッセージを画面上に表示する
 socket.on('receiveMessageEvent', function (data) {
-    $('#thread').prepend('<p class="message_box">' + data + '</p>');
+    $('#thread').prepend('<p>' + data + '</p>');
     console.log(data);
 });
 
