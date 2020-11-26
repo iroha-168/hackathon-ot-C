@@ -8,6 +8,8 @@ module.exports = function (server) {
     io.sockets.on('connection', function (socket) {
         // 投稿モジュールの呼出
         require('./publish')(socket, io);
+        //タスクモジュールの呼び出し
+        require('./task')(socket, io);
 
         // 入室モジュールの呼出
         require('./enter')(socket);

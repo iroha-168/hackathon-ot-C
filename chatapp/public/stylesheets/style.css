@@ -10,15 +10,28 @@ body {
 }
 
 .container {
-    max-width: 650px;
+    max-width: 80%;
     margin: 1em 0;
     padding: 1em;
     color: 	#006400;
     background-color: #FFFFFF;
     border: solid 3px 	#FFD700;
+    margin: auto;
 }
 
-.message_box {
+@media (min-width: 600px) {
+    .parent {
+      display: flex;
+    }
+    .child1 {
+      flex-grow: 1;
+    }
+    .child2 {
+      flex-grow: 1;
+    }
+}
+
+.message_box{
     margin: 1em 0;
     padding: 1em;
     background-color: #ffe082;
@@ -95,7 +108,7 @@ div {
 }
 
 .room-message_textarea {
-    width: 500px;
+    width: 100%;
 }
 
 .room-submit {
@@ -120,4 +133,20 @@ div {
 
 .room-exit_button {
 
+}
+
+.task_box {
+    margin: 1em 0;
+    padding: 1em;
+    background-color:#bcff7a;
+    border-radius: 3px;
+    border-color: darkcyan;
+}
+
+.memo_box {
+    
+}
+
+.task-thread {
+    
 }

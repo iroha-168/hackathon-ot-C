@@ -56,12 +56,10 @@ function publish() {
     
     //改行文字を<br>に置き換え
     let newMessage = message.replace(/\n/g,"<br>");
-    // 投稿内容を送信
-    socket.emit('sendMessageEvent',userName +"さん"+" : "+ newMessage);
     // 現在時刻を取得
-    const sendTime = getNow();
+    let sendTime = getNow();
     // 投稿内容を送信
-    socket.emit('sendMessageEvent',userName +"さん"+" : "+ message +`<br><div align="right">` +  sendTime + "</div>")
+    socket.emit('sendMessageEvent',userName +"さん"+" : "+ newMessage +`<br><div align="right">` +  sendTime + "</div>")
     //textBoxを空にする
     $('#message').val("");
 
@@ -71,6 +69,7 @@ function publish() {
 // サーバから受信した投稿メッセージを画面上に表示する
 socket.on('receiveMessageEvent', function (data) {
     $('#thread').prepend('<p class="message_box">' + data + '</p>');
+    console.log(data);
 });
 
 function getNow() {

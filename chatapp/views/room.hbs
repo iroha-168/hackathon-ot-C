@@ -2,40 +2,44 @@
     <div class="row">
         <h1>チャットルーム</h1>
     </div>
-    <article class="chat-area">
-        <div class="row">
-            <form method="post" action="/">
-                <div class="room-login_user">
-                    ログインユーザ：{{userName}}さん
-                    <input id="userName" type="hidden" value={{userName}}>
-                </div>
-                <div class="room-message">
-                    <textarea id="message" rows="4" class="room-message_textarea" placeholder="投稿文を入力してください"></textarea>
-                </div>
-                <div class="room-submit">
-                    <input type="button" value="投稿" id="form2" class="common-button room-publish_button" onclick="publish();">
-                    <input type="button" value="メモ" class="common-button room-memo_button" onclick="memo();">
-                </div>
-                <div class="room-thread">
-                    <div id="thread"></div>
-                </div>
-                <div class="room-exit">
-                    <input type="button" value="退室する" class="common-button room-exit_button" onclick="exit();">
-                </div>
-            </form>
-        </div>
-    </article>
-    <aside class="task-area">
-        <div class="room-task">
-            <textarea id="task" rows="4" class="room-task_textarea" placeholder="taskを入力してください"></textarea>
-        </div>
-            <div class="task-submit">
-                <input type="button" value="投稿" class="common-button room-publish_button" onclick="publish();">
+    <div class="parent">
+        <div class="child1">
+            <div class="row">
+                <form method="post" action="/">
+                    <div class="room-login_user">
+                        ログインユーザ：{{userName}}さん
+                        <input id="userName" type="hidden" value={{userName}}>
+                    </div>
+                    <div class="room-message">
+                        <textarea id="message" rows="4" class="room-message_textarea" placeholder="投稿文を入力してください"></textarea>
+                    </div>
+                    <div class="room-submit">
+                        <input type="button" value="投稿" id="form2" class="common-button room-publish_button" onclick="publish();">
+                        <input type="button" value="個人メモ追加" class="common-button room-memo_button" onclick="memo();">
+                        <input type="button" value="共有メモ更新" class="common-button room-publish_button" onclick="task();">
+                    </div>
+                    <div class="room-thread">
+                        <div id="thread"></div>
+                    </div>
+                    <div class="room-exit">
+                        <input type="button" value="退室する" class="common-button room-exit_button" onclick="exit();">
+                    </div>
+                </form>
             </div>
+        </div>
+        
+        <div class="child2">
+            <h3>共有メモ</h3>
             <div class="task-thread">
-                <div id="task"></div>
+                <div id="taskContent"></div>
             </div>
-    </aside>
+            <h3>個人メモ</h3>
+            <div class="memo-thread">
+                <div id="memoContent"></div>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 <script src="/javascripts/socket.js"></script>
@@ -43,4 +47,5 @@
 <script src="/javascripts/publish.js"></script>
 <script src="/javascripts/memo.js"></script>
 <script src="/javascripts/exit.js"></script>
-<script src="/javascripts/db_update.js"></script>
+<script src="/javascripts/task.js"></script>
+
